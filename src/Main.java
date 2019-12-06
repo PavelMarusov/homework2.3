@@ -6,20 +6,23 @@ public class Main {
         System.out.println(bankAccount.getAmount());
 
         for (int i = 0; ; i++) {
-            System.out.println(bankAccount.getAmount()+ " "+i);
+//            System.out.println(bankAccount.getAmount()+ " "+i);
             try {
                 bankAccount.withDraw(6000);
 
             } catch (LimitException e) {
                 e.printStackTrace();
+                break;
+
             }
-            System.out.println(bankAccount.amount-bankAccount.amount);
-            break;
+
+
 
 
 
         }
-        
+        System.out.println(bankAccount.amount-bankAccount.amount);
+
 
 
     }
